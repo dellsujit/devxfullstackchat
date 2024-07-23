@@ -1,0 +1,13 @@
+service: frontend
+runtime: nodejs18
+
+handlers:
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+
+- url: /
+  static_dir: dist
+
+- url: /(.*)
+  script: auto
